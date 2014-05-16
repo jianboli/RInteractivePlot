@@ -2,10 +2,10 @@
 \alias{Zoom}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Zoom in a plot
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Zoom in a plot based on the 2 points you select
 }
 \usage{
 Zoom()
@@ -37,19 +37,9 @@ Zoom()
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function () 
-{
-    xylim <- par("usr")
-    zoomplot(locator(2))
-    return(xylim)
-  }
-}
+plot(1:10, sin(1:10))
+Zoom() # now click on 2 points in the plot to zoom in
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ zoom }
+\keyword{ rescale }% __ONLY ONE__ keyword per line

@@ -1,12 +1,8 @@
 \name{BestFit}
 \alias{BestFit}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Best fit}
+\description{This function find the xy limit such that all the points are shown.}
 \usage{
 BestFit()
 }
@@ -14,18 +10,12 @@ BestFit()
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
+\value{ returns current xylimit in the form of c(x1, x2, y1, y2)}
 \references{
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Jianbo Li
 }
 \note{
 %%  ~~further notes~~
@@ -37,36 +27,11 @@ BestFit()
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function () 
-{
-    xylim <- par("usr")
-    tmp <- recordPlot()[[1]]
-    xrange <- vector()
-    yrange <- vector()
-    for (i in seq(along = tmp)) {
-        fn <- tmp[[i]][[1]]
-        alst <- as.list(tmp[[i]][[2]])
-        tmp2 <- all.equal("C_locator", alst[[1]]$name)
-        if (is.logical(tmp2) && tmp2) {
-            next
-        }
-        tmp2 <- all.equal("C_plotXY", alst[[1]]$name)
-        if (is.logical(tmp2) && tmp2) {
-            xrange <- range(xrange, range(alst[[2]]$x, na.rm = T))
-            yrange <- range(yrange, range(alst[[2]]$y, na.rm = T))
-        }
-    }
-    if (length(xrange) == 2 & length(yrange) == 2) 
-        zoomplot(xrange, yrange)
-    return(xylim)
-  }
-}
+x <- 1:100
+plot(x, xlim=c(1,10))
+BestFit()
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ plot }
+\keyword{ interactive }% __ONLY ONE__ keyword per line
+

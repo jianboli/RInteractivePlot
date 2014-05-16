@@ -2,10 +2,10 @@
 \alias{Xlim}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+x limit
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Change x limits after the figure has been plotted
 }
 \usage{
 Xlim(xlim)
@@ -42,20 +42,9 @@ Xlim(xlim)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (xlim) 
-{
-    xylim <- par("usr")
-    ylim <- xylim[3:4]
-    zoomplot(xlim, ylim)
-    return(xylim)
-  }
-}
+plot(1:10, sin(1:10))
+Xlim(c(1,5))
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ axis }
+\keyword{ limits }% __ONLY ONE__ keyword per line

@@ -1,9 +1,7 @@
 \name{Restore}
 \alias{Restore}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
+\title{Reset the plot to a given xylim}
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
@@ -12,8 +10,7 @@ Restore(xylim)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{xylim}{
-%%     ~~Describe \code{xylim} here~~
+  \item{xylim}{xylim to restore to. In the form of c(x1, x2, y1, y2)
 }
 }
 \details{
@@ -30,7 +27,7 @@ Restore(xylim)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Jianbo Li
 }
 \note{
 %%  ~~further notes~~
@@ -42,16 +39,10 @@ Restore(xylim)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (xylim) 
-{
-    zoomplot(xylim[1:2], xylim[3:4])
-  }
-}
+x <- 1:100
+plot(x)
+xylim <- Xlim(c(1,10))
+Restore(xylim)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }

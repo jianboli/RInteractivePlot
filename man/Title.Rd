@@ -2,10 +2,10 @@
 \alias{Title}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Set the title of figure
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function add title or change the original title to the specified one on the figure.
 }
 \usage{
 Title(tit = NULL)
@@ -30,7 +30,7 @@ Title(tit = NULL)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Jianbo Li
 }
 \note{
 %%  ~~further notes~~
@@ -42,32 +42,9 @@ Title(tit = NULL)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (tit = NULL) 
-{
-    if (is.null(tit)) 
-        return
-    tmp <- recordPlot()[[1]]
-    for (i in seq(along = tmp)) {
-        fn <- tmp[[i]][[1]]
-        alst <- as.list(tmp[[i]][[2]])
-        tmp2 <- all.equal("C_locator", alst[[1]]$name)
-        if (is.logical(tmp2) && tmp2) {
-            next
-        }
-        tmp2 <- all.equal("C_title", alst[[1]]$name)
-        if (is.logical(tmp2) && tmp2) {
-            alst[[2]] <- tit
-        }
-        do.call(fn, alst)
-    }
-  }
-}
+plot(1:10)
+title("Demo")
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ title }
+\keyword{ main }% __ONLY ONE__ keyword per line
