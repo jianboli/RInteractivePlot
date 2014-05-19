@@ -1,6 +1,6 @@
 RInteractivePlot
 ================
-Some R functions to modify the R basic plots after they are already generated. This is more or less similar to Matlab way of plotting. In general, I like the way of charting with ggplot. However, there are already tons of packages using R basic plotting functions to visualize data. When dealing with this, some functions list here could be helpful.
+Some R functions to modify the R basic plots after they are already generated. This is more or less similar to Matlab way of plotting. In general, I like the way of charting with ggplot. However, there are already tons of packages using R basic plotting functions to visualize data. When dealing with them, some functions list here could be helpful.
 
 Examples:
 
